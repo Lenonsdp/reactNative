@@ -1,0 +1,22 @@
+generate editor config
+root = true
+
+[*]
+end_of_line = lf
+indent_style = space
+indent_size = 4
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+apago esLintrc se existir editor
+yarn add eslint -d
+yarn eslint --init
+apague o package.json lock e rode yarn
+
+yarn add prettier eslint-config-prettier eslint-plugin-prettier babel-eslint -d
+
+yarn add reactotron-react-native...
+Se o reactOtron nao ler no refresh tem que redirecionar a porta do adb  adb "reverse tcp:9090 tcp:9090" se estiver rodando
+via usb coloque o ip da maquina na configure({ host? '192.xxx.xx..}).
+outra coisa o adb tem que enxergar a path, se não tem que entrar dentro da sdk/plataform-tools/adb ..
