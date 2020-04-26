@@ -30,3 +30,7 @@ Instalei a versão 5 no momento  yarn add @react-navigation/native,
 ler a documentação para instalar os tipos de navigations example -v 5= yarn add @react-navigation/stack
 
 yarn add react-native-vector-icons
+
+
+yarn add @react-native-community/async-storage
+Para usar o loaclStorage do celular
