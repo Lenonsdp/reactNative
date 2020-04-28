@@ -34,3 +34,7 @@ yarn add react-native-vector-icons
 
 yarn add @react-native-community/async-storage
 Para usar o loaclStorage do celular
+
+
+yarn add prop-types
+Para assinatura do objeto

@@ -1,31 +1,27 @@
-import * as React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
-import { NavigationContainer } from '@react-navigation/native';
+import React from 'react';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 
 import Main from './pages/Main';
 import User from './pages/User';
 
-const Stack = createStackNavigator();
-
-function Routes() {
-    return (
-        <NavigationContainer>
-            <Stack.Navigator
-                screenOptions={{
-                    headerStyle: {
-                        backgroundColor: '#7159c1',
-                    },
-                    headerTintColor: '#fff',
-                    headerTitleStyle: {
-                        fontWeight: 'bold',
-                    },
-                }}
-            >
-                <Stack.Screen name="Main" component={Main} />
-                <Stack.Screen name="User" component={User} />
-            </Stack.Navigator>
-        </NavigationContainer>
-    );
-}
+const Routes = createAppContainer(
+    createStackNavigator(
+        {
+            Main,
+            User,
+        },
+        {
+            defaultNavigationOptions: {
+                headerStyle: {
+                    backgroundColor: '#7159C1',
+                },
+                headerTintColor: '#FFF',
+                headerBackTitleVisible: false,
+                headerTitleAlign: 'center',
+            },
+        }
+    )
+);
 
 export default Routes;
